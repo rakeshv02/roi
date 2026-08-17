@@ -228,6 +228,95 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />);
   }
 })();
 </script>
+
+<section id="seo-content">
+  <style>
+    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#334155;line-height:1.7}
+    #seo-content h2{font-size:1.35rem;color:#0f172a;margin:2rem 0 .75rem}
+    #seo-content h3{font-size:1.05rem;color:#0f172a;margin:1.25rem 0 .5rem}
+    #seo-content p,#seo-content li{font-size:.95rem}
+    #seo-content ul{padding-left:1.4rem;margin:.5rem 0}
+    #seo-content .example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    @media(prefers-color-scheme:dark){#seo-content{color:#cbd5e1}#seo-content h2,#seo-content h3{color:#f1f5f9}#seo-content .example{background:#1e293b;border-color:#334155}}
+  </style>
+  <h2>How to Use the ROI Calculator</h2>
+  <p>The ROI Calculator measures the return on any investment as a percentage of what you put in. Enter your initial investment amount, your final value or total return, and optionally the investment duration in years. The calculator instantly computes your total ROI as a percentage, your absolute profit or loss, and — if you provide a time period — your annualised Compound Annual Growth Rate (CAGR). CAGR is particularly useful for comparing investments held for different lengths of time, since it normalises the return to a per-year basis regardless of how long the money was invested.</p>
+  <p>Return on Investment is one of the most fundamental metrics in finance and business. The formula is simple: ROI = ((Final Value − Initial Cost) ÷ Initial Cost) × 100. If you invest £10,000 and it grows to £13,500, your ROI is ((13,500 − 10,000) ÷ 10,000) × 100 = 35%. But raw ROI does not tell you how long it took to achieve that return — a 35% return over two years is very different from a 35% return over ten years. CAGR solves this by expressing what annual return, compounded each year, would produce the same total return over the same period. The formula is CAGR = (Final Value ÷ Initial Value)^(1/years) − 1. For a £10,000 investment that became £13,500 in two years, CAGR = (1.35)^0.5 − 1 ≈ 16.2% per year.</p>
+  <p>ROI is used across virtually every domain of finance and business. Investors use it to evaluate stocks, funds, and property. Businesses use it to assess marketing campaigns, capital expenditure, and new product launches. Individuals use it to compare savings accounts, rental yields, and the cost of home improvements. One important limitation of basic ROI is that it ignores the time value of money — £1 today is worth more than £1 in ten years because of inflation and opportunity cost. For longer-term investments, CAGR and net-present-value (NPV) calculations provide a more complete picture. This calculator handles CAGR automatically alongside simple ROI.</p>
+
+  <h2>Common Uses of the ROI Calculator</h2>
+  <ul>
+    <li><strong>Stock and fund investments:</strong> Calculate total and annualised return on a portfolio or individual holding.</li>
+    <li><strong>Property investment:</strong> Measure capital gain ROI over your holding period; combine with rental yield for total return.</li>
+    <li><strong>Business investments:</strong> Evaluate whether a marketing campaign, equipment purchase, or expansion generated a positive return.</li>
+    <li><strong>Comparing investments:</strong> Use CAGR to put investments held for different lengths of time on a level playing field.</li>
+    <li><strong>Savings accounts:</strong> Compare the effective annual return from different accounts with varying interest structures.</li>
+    <li><strong>Home improvements:</strong> Estimate whether a renovation or extension justifies its cost in terms of property value uplift.</li>
+  </ul>
+
+  <div class="example"><strong>Example 1 (Stock):</strong> Bought 100 shares at £15 each (£1,500 total). Sold at £22 each (£2,200 total) after 3 years. ROI = 46.7%. CAGR = (2200/1500)^(1/3) − 1 ≈ <strong>13.6%/year</strong>.</div>
+  <div class="example"><strong>Example 2 (Property):</strong> Bought for £250,000, sold for £340,000 after 5 years. ROI = 36%. CAGR = (340/250)^(1/5) − 1 ≈ <strong>6.3%/year</strong>.</div>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>What is a good ROI?</h3>
+  <p>A "good" ROI depends entirely on the asset class, risk level, and time period. The long-run average annual return of the S&P 500 is approximately 10% nominally (7% after inflation). A buy-to-let property might target 5–8% combined (capital + yield). A savings account might return 4–5% in 2024. Higher returns almost always come with higher risk — comparing ROIs without considering risk is misleading.</p>
+  <h3>What is the difference between ROI and CAGR?</h3>
+  <p>ROI measures the total return over the entire investment period as a percentage of the initial investment, regardless of how long it took. CAGR (Compound Annual Growth Rate) converts that total return into an equivalent annual rate, making it possible to compare investments held for different lengths of time on the same basis.</p>
+  <h3>Does ROI account for inflation?</h3>
+  <p>Basic ROI calculations use nominal (not inflation-adjusted) values. To find your real return, subtract the annual inflation rate from your CAGR. If your investment returned 8% annually but inflation averaged 3%, your real return was approximately 5% per year.</p>
+  <h3>Can ROI be negative?</h3>
+  <p>Yes. A negative ROI means the investment lost value — your final amount is less than your initial investment. For example, if you invested £5,000 and it is now worth £3,800, your ROI is (3,800 − 5,000) ÷ 5,000 × 100 = −24%.</p>
+  <h3>Should I use ROI or IRR for evaluating a business investment?</h3>
+  <p>For investments with irregular cash flows (multiple inputs and outputs at different times), Internal Rate of Return (IRR) is more appropriate than simple ROI. IRR accounts for the timing of cash flows, not just the final total. For simple one-in, one-out investments, ROI and CAGR are sufficient and easier to interpret.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good ROI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the asset class and risk level. The long-run S&P 500 average is ~10% nominally. Property might target 5–8% combined. Savings accounts returned 4–5% in 2024. Higher returns almost always come with higher risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ROI and CAGR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ROI measures total return over the whole period as a percentage of initial investment. CAGR converts that into an equivalent annual rate, allowing fair comparison of investments held for different lengths of time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ROI account for inflation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Basic ROI uses nominal values. To find real return, subtract the annual inflation rate from your CAGR. If CAGR is 8% and inflation is 3%, your real return is approximately 5% per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can ROI be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A negative ROI means the investment lost value. If you invested £5,000 and it is now worth £3,800, your ROI is −24%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use ROI or IRR for business investments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For investments with irregular cash flows at different times, Internal Rate of Return (IRR) is more appropriate. For simple one-in one-out investments, ROI and CAGR are sufficient and easier to interpret."
+      }
+    }
+  ]
+}
+</script>
 <footer style="background:#1a1a2e;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:13px;color:#94a3b8;line-height:1.8">
 <div style="font-weight:700;color:#fff;font-size:15px">⚡ Tabutility</div>
 <div>Free, private, browser-based tools. No sign-up, no tracking.</div>
